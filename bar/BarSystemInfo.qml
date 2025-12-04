@@ -83,7 +83,7 @@ RowLayout {
             z: -1
 
             from: 0
-            value: Readings.wifiStrengthNum
+            value: Readings.wifiStrength
             to: 100
 
             enabled: false
@@ -99,7 +99,7 @@ RowLayout {
             }
 
             Text {
-                text: Readings.wifiStrength
+                text: `${Readings.wifiStrength}%`
                 color: Colors.text
             }
         }
@@ -112,7 +112,7 @@ RowLayout {
 
         Process {
             id: nmtuiCmd
-            command: ["sh", "-c", "hyprctl dispatch exec '[float] kitty nmtui connect'"]
+            command: ["hyprctl", "dispatch", "exec", "[float] kitty nmtui connect"]
         }
     }
 
@@ -127,16 +127,15 @@ RowLayout {
             z: -1
 
             from: 0
-            value: Readings.brightnessNum
+            value: Readings.brightness
             to: 100
 
             onValueChanged: () => {
                 // with zero delay, this makes the screen flash on quickshell reload
                 // and clicking on the slider (instead of dragging) doesn't set
                 // brightness properly
-                // although... ocassionally, even with this delay, the screen (or,
+                // although... occasionally, even with this delay, the screen (or,
                 // well, the backlight) flashes
-                // TODO: prevent this (and the "0%" value that shows for a split second
                 root.setTimeout(() => brightnessCmd.running = true, 20);
                 brightnessPercentage.text = `${parseInt(brightnessSlider.value)}%`;
             }
@@ -153,7 +152,7 @@ RowLayout {
 
             Text {
                 id: brightnessPercentage
-                text: Readings.brightness
+                text: `${Readings.brightness}%`
                 color: Colors.text
             }
         }
@@ -197,13 +196,12 @@ RowLayout {
         MouseArea {
             anchors.fill: parent
 
-            // acceptedButtons: Qt.RightButton
             onClicked: btopCmd.running = true
         }
 
         Process {
             id: btopCmd
-            command: ["sh", "-c", "hyprctl dispatch exec '[float] kitty btop'"]
+            command: ["hyprctl", "dispatch", "exec", "[float] kitty btop"]
         }
     }
 }

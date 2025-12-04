@@ -18,10 +18,7 @@ Singleton {
     }
 
     // backlight
-    readonly property string brightness: {
-        `${brightnessNum}%`;
-    }
-    readonly property int brightnessNum: {
+    readonly property int brightness: {
         (brightnessCurrentCmd.value / brightnessMaxCmd.value * 100).toFixed(0);
     }
 
@@ -54,10 +51,7 @@ Singleton {
     readonly property int hardwareMin: -90
 
     // wifi
-    readonly property string wifiStrength: {
-        `${wifiStrengthNum}%`;
-    }
-    readonly property int wifiStrengthNum: {
+    readonly property int wifiStrength: {
         // waybar formula
         (100 - ((Math.abs(wifiStrengthCmd.value - hardwareOptimum) / (hardwareOptimum - hardwareMin)) * 100)).toFixed(0);
     }
