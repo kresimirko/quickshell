@@ -9,9 +9,12 @@ Repeater {
     Text {
         id: workspaceLabel
 
+        font.family: Consts.fFamily
+        font.pixelSize: Consts.fPxSize
+
         required property int index
 
-        color: Hyprland.focusedWorkspace.id == index + 1 ? Colors.accent : Colors.text
+        color: Hyprland.focusedWorkspace.id == index + 1 ? Consts.cAccent : Consts.cText
         text: index + 1
 
         MouseArea {

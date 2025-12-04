@@ -34,4 +34,6 @@ Slider {
             color: "#40ffffff"
         }
     }
+
+    handle: Item {}
 }

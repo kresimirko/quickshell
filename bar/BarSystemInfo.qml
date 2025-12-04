@@ -50,14 +50,21 @@ RowLayout {
             anchors.centerIn: parent
 
             Text {
-                font.family: "Caskaydia Cove NF"
+                font.family: Consts.fFamilyIcon
+                font.pixelSize: Consts.fPxSize
+                
+                color: Consts.cText
+                
                 text: "󰕾"
-                color: Colors.text
             }
 
             Text {
+
+                font.family: Consts.fFamily
+                font.pixelSize: Consts.fPxSize
+
                 text: `${(root.pwNode.audio.volume * 100).toFixed(0)}%`
-                color: Colors.text
+                color: Consts.cText
             }
         }
 
@@ -93,14 +100,20 @@ RowLayout {
             anchors.centerIn: parent
 
             Text {
-                font.family: "Caskaydia Cove NF"
+                font.family: Consts.fFamilyIcon
+                font.pixelSize: Consts.fPxSize
+                
+                color: Consts.cText
+
                 text: "󰖩"
-                color: Colors.text
             }
 
             Text {
+                font.family: Consts.fFamily
+                font.pixelSize: Consts.fPxSize
+
                 text: `${Readings.wifiStrength}%`
-                color: Colors.text
+                color: Consts.cText
             }
         }
 
@@ -145,15 +158,20 @@ RowLayout {
             anchors.centerIn: parent
 
             Text {
-                font.family: "Caskaydia Cove NF"
+                font.family: Consts.fFamilyIcon
+                font.pixelSize: Consts.fPxSize
+                
+                color: Consts.cText
+
                 text: "󰃟"
-                color: Colors.text
             }
 
             Text {
                 id: brightnessPercentage
+                font.family: Consts.fFamily
+                font.pixelSize: Consts.fPxSize
                 text: `${Readings.brightness}%`
-                color: Colors.text
+                color: Consts.cText
             }
         }
 
@@ -182,14 +200,20 @@ RowLayout {
             anchors.centerIn: parent
 
             Text {
-                font.family: "Caskaydia Cove NF"
+                font.family: Consts.fFamilyIcon
+                font.pixelSize: Consts.fPxSize
+
+                color: Consts.cText
+
                 text: "󰂁"
-                color: Colors.text
             }
 
             Text {
+                font.family: Consts.fFamily
+                font.pixelSize: Consts.fPxSize
+
                 text: `${(UPower.displayDevice.percentage * 100).toFixed(0)}%`
-                color: Colors.text
+                color: Consts.cText
             }
         }
 

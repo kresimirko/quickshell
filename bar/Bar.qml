@@ -26,7 +26,7 @@ Scope {
 
             // background
             Rectangle {
-                color: Colors.base
+                color: Consts.cBase
                 width: parent.width
                 height: parent.height
                 opacity: 0.8
@@ -36,7 +36,7 @@ Scope {
             Rectangle {
                 width: parent.width
                 height: 1
-                color: Colors.border
+                color: Consts.cBorder
             }
 
             // the actual bar
@@ -56,7 +56,7 @@ Scope {
 
                     // separator
                     Rectangle {
-                        color: Colors.border
+                        color: Consts.cBorder
                         implicitWidth: 1
                         Layout.fillHeight: true
                     }
@@ -74,7 +74,7 @@ Scope {
 
                     // separator
                     Rectangle {
-                        color: Colors.border
+                        color: Consts.cBorder
                         implicitWidth: 1
                         Layout.fillHeight: true
                     }
@@ -85,7 +85,7 @@ Scope {
                     // separator
                     Rectangle {
                         visible: SystemTray.items.values.length > 0
-                        color: Colors.border
+                        color: Consts.cBorder
                         implicitWidth: 1
                         Layout.fillHeight: true
                     }

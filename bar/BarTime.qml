@@ -3,6 +3,11 @@ import qs
 
 Text {
     id: clock
-    color: Colors.text
+
+    font.family: Consts.fFamily
+    font.pixelSize: Consts.fPxSize
+
+    color: Consts.cText
+
     text: Readings.time
 }

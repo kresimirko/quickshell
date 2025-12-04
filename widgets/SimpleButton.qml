@@ -11,7 +11,7 @@ Button {
         text: root.text
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
-        color: Colors.text
+        color: Consts.cText
     }
 
     background: Rectangle {
